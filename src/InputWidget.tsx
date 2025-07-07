@@ -1,15 +1,16 @@
+import type { ChangeEvent, FC } from 'react';
 
 interface InputWidgetProps {
     _label: string;
-    _value: string;
-    _onChange: () => void;
+    // _value: string;
+    _onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputWidget: React.FC<InputWidgetProps> = ({_label, _value, _onChange}) => {
+const InputWidget: React.FC<InputWidgetProps> = ({_label, _onChange}) => {
     return(
         <div>
             <p>{_label}</p>
-            <input type="text" value={_value} onChange={_onChange}></input>
+            <input type="text" onChange={_onChange} placeholder={_label} className='rounded-md outline-4 outline-amber-400'></input>
         </div>
     )
 }
