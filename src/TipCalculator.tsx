@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputWidget from "./InputWidget";
+import AmountHolder from "./AmountHolder";
 
 export default function TipCalculator(){
     const [_amount, _setAmount] = useState(0)
@@ -17,7 +18,8 @@ export default function TipCalculator(){
             </div>
             {/* output div */}
             <div>
-
+                <AmountHolder _holder="Tip" _amount={String(_amount*(_tipPercentage/100))}></AmountHolder>
+                <AmountHolder _holder="Amount per person" _amount={String((_amount/_person) + (_amount/_person)*(_tipPercentage/100))}></AmountHolder>
             </div>
         </div>
     )
