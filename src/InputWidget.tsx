@@ -9,8 +9,8 @@ interface InputWidgetProps {
 const InputWidget: React.FC<InputWidgetProps> = ({_label, _onChange}) => {
     return(
         <div>
-            <p>{_label}</p>
-            <input type="text" onChange={_onChange} placeholder={_label} className='rounded-md outline-4 outline-amber-400'></input>
+            <p className='font-normal text-gray-700'>{_label}</p>
+            <input type="text" onChange={_onChange} placeholder={_label} className='rounded-sm outline-2 outline-teal-400 w-full'></input>
         </div>
     )
 }

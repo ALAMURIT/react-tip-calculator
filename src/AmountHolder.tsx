@@ -1,9 +1,13 @@
 function AmountHolder({_holder="", _amount="0"}){
     return(
-        <div className="bg-red-100">
-            <p>{_holder}</p>
-            <p>/person</p>
-            <p>{_amount}</p>
+        <div className="flex flex-row items-center w-full justify-between">
+            <div>
+                <p className="text-white">{_holder}</p>
+                <p className="text-teal-700">/ person</p>
+            </div>
+            <div>
+                <p className="text-4xl">$ {_amount}</p>
+            </div>
         </div>
     )
 }
